@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>MSC Team — Temporary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top, #0f2027, #05080d 70%);
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* АНИМИРОВАННЫЙ ФОН */
+.bg {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(88,101,242,0.15),
+        transparent
+    );
+    animation: move 20s linear infinite;
+}
+
+@keyframes move {
+    0% { transform: translate(-25%, -25%) rotate(0deg); }
+    100% { transform: translate(-25%, -25%) rotate(360deg); }
+}
+
+/* КОНТЕНТ */
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    text-align: center;
+    padding: 60px 50px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.65);
+    box-shadow:
+        0 0 30px rgba(88,101,242,0.4),
+        inset 0 0 40px rgba(88,101,242,0.1);
+    backdrop-filter: blur(12px);
+    max-width: 520px;
+    width: 90%;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-shadow: 0 0 25px rgba(88,101,242,0.9);
+}
+
+.tag {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffcc00;
+    letter-spacing: 2px;
+}
+
+.line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #5865F2, transparent);
+    margin: 25px auto;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* КНОПКА DISCORD */
+.discord {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 18px 40px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #5865F2, #404EED);
+    box-shadow:
+        0 0 25px rgba(88,101,242,0.8),
+        inset 0 0 15px rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.discord:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow:
+        0 0 45px rgba(88,101,242,1),
+        inset 0 0 25px rgba(255,255,255,0.3);
+}
+
+/* ФУТЕР */
+footer {
+    margin-top: 35px;
+    font-size: 12px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+<div class="bg"></div>
+
+<div class="container">
+    <div class="card">
+        <h1>MSC TEAM</h1>
+        <div class="tag">TEMPORARY • NOT OFFICIAL</div>
+
+        <div class="line"></div>
+
+        <p>
+            Это временная страница команды <strong>MSC Team</strong>.<br>
+            Мы строим нечто большее, чем просто сайт.<br>
+            Присоединяйся к нашему Discord и будь частью команды.
+        </p>
+
+        <a class="discord" href="https://discord.gg/pon" target="_blank">
+            JOIN DISCORD
+        </a>
+
+        <footer>
+            MSC Team © 2026
+        </footer>
+    </div>
+</div>
+</body>
+</html>

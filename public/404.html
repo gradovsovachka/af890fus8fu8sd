@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>404 — MSC Team</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top, #0f2027, #05080d 70%);
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,0,80,0.15),
+        transparent
+    );
+    animation: move 18s linear infinite;
+}
+
+@keyframes move {
+    0% { transform: translate(-25%, -25%) rotate(0deg); }
+    100% { transform: translate(-25%, -25%) rotate(360deg); }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    text-align: center;
+    padding: 60px 50px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.65);
+    box-shadow:
+        0 0 30px rgba(255,0,80,0.4),
+        inset 0 0 40px rgba(255,0,80,0.1);
+    backdrop-filter: blur(12px);
+    max-width: 520px;
+    width: 90%;
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 96px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-shadow: 0 0 35px rgba(255,0,80,0.9);
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #ff4d6d;
+}
+
+.line {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff4d6d, transparent);
+    margin: 30px auto;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* КНОПКИ */
+.actions {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #5865F2, #404EED);
+    box-shadow: 0 0 25px rgba(88,101,242,0.8);
+    transition: all 0.3s ease;
+}
+
+.btn.secondary {
+    background: linear-gradient(135deg, #ff4d6d, #ff003c);
+    box-shadow: 0 0 25px rgba(255,0,80,0.8);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* ФУТЕР */
+footer {
+    margin-top: 35px;
+    font-size: 12px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+<div class="bg"></div>
+
+<div class="container">
+    <div class="card">
+        <h1>404</h1>
+        <h2>PAGE NOT FOUND</h2>
+
+        <div class="line"></div>
+
+        <p>
+            Ты попал в пустоту.<br>
+            Такой страницы не существует или она была удалена.
+        </p>
+
+        <div class="actions">
+            <a class="btn" href="/">НА ГЛАВНУЮ</a>
+            <a class="btn secondary" href="https://discord.gg/pon" target="_blank">
+                DISCORD
+            </a>
+        </div>
+
+        <footer>
+            MSC Team © 2026
+        </footer>
+    </div>
+</div>
+</body>
+</html>
